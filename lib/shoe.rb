@@ -1,19 +1,19 @@
 class Shoe
-  attr_accessor :author, :page_count  # remove the attr_accessor for genre
-  attr_reader :, :brand  # add an attr_reader for genre
- 
+  attr_accessor :color, :size  
+  attr_reader :condition, :brand  
+  
   BRANDS = []
  
-  def initialize(title)
-    @title = title
+  def initialize(brand)
+    @brand = brand
   end
  
   def cobble
     @condition = "new" 
-    puts ""
+    puts "new"
   end
  
-  # create the writer for genre and add the logic for the class constant
+ 
   def brand=(brand)
     @brand = brand
     BRANDS << brand  
