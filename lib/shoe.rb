@@ -1,21 +1,19 @@
 class Shoe
-  attr_accessor :color, :size  
-  attr_reader :condition, :brand  
-  
-  BRANDS = []
- 
-  def initialize(brand)
-    @brand = brand
-  end
- 
-  def cobble
-    @condition = "new" 
-    puts "new"
-  end
- 
- 
-  def brand=(brand)
-    @brand = brand
-    BRANDS << brand  
-  end
-end
+  attr_accessor :color, :size, :material, :condition	  
+  attr_reader :brand	 
+
+   BRANDS = []
+
+
+  def initialize(brand)	  
+    @brand = brand	   
+    BRANDS << brand unless BRANDS.any? { |b| b == brand }
+  end	
+
+
+
+
+  def cobble	  
+    @condition = "new"	    
+  end 
+end 
